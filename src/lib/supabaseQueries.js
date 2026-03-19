@@ -5,7 +5,7 @@ import { supabase } from './sync'
 // ============================================
 
 export async function getVendedores() {
-  const { data } = await supabase.from('Tecnicos').select('*').eq('is_vendedor', true)
+  const { data } = await supabase.from('vendedores').select('*').eq('ativo', true)
   return data || []
 }
 
@@ -130,7 +130,7 @@ export async function getMetricasPorVendedor() {
   ])
 
   return vendedores.map((v) => {
-    const vendId = v.Id
+    const vendId = v.id
     const visitasVend = visitas.filter((vis) => vis.vendedor_id === vendId)
     const visitasSemana = visitasVend.filter((vis) => vis.data_visita >= semana).length
     const negociosVend = negocios.filter((n) => n.vendedor_id === vendId)
@@ -143,7 +143,7 @@ export async function getMetricasPorVendedor() {
 
     return {
       id: vendId,
-      nome: v.Nome,
+      nome: v.nome,
       visitasSemana,
       totalVisitas: visitasVend.length,
       pipeline,

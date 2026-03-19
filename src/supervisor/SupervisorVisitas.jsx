@@ -71,7 +71,7 @@ export default function SupervisorVisitas() {
           >
             <option value="">Todos vendedores</option>
             {vendedores.map((v) => (
-              <option key={v.Id} value={v.Id}>{v.Nome}</option>
+              <option key={v.id} value={v.id}>{v.nome}</option>
             ))}
           </select>
           <select

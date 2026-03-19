@@ -215,18 +215,22 @@ export async function syncAll() {
 
   // Verificar se tem sessão autenticada
   const { data: { session } } = await supabase.auth.getSession()
-  if (!session) {
-    console.log('[Sync] Sem sessão autenticada, pulando sync')
-    return
+  const hasSession = !!session
+  // Sem sessão: ainda faz pull (leitura), mas pula push (escrita)
+  if (!hasSession) {
+    console.log('[Sync] Sem sessão autenticada, apenas pull')
   }
   isSyncing = true
 
   try {
     notify('syncing', 'Sincronizando...')
 
-    // 1. Push: enviar pendentes locais para o Supabase
-    const pushed = await pushRecords()
-    await pushFotos()
+    // 1. Push: enviar pendentes locais para o Supabase (só com sessão)
+    let pushed = 0
+    if (hasSession) {
+      pushed = await pushRecords()
+      await pushFotos()
+    }
 
     // 2. Pull: baixar dados do Supabase para o IndexedDB
     const pulled = await pullRecords()

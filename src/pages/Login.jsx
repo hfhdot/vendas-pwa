@@ -23,37 +23,33 @@ export default function Login() {
 
       if (authError) throw new Error('Email ou senha inválidos')
 
-      // 2. Buscar dados do vendedor na tabela Tecnicos
-      const { data: tecnico, error: tecError } = await supabase
-        .from('Tecnicos')
+      // 2. Buscar dados do vendedor na tabela vendedores
+      const { data: vendedor, error: vendError } = await supabase
+        .from('vendedores')
         .select('*')
         .eq('auth_uid', authData.user.id)
-        .eq('is_vendedor', true)
+        .eq('ativo', true)
         .single()
 
-      if (tecError || !tecnico) {
+      if (vendError || !vendedor) {
         // Fallback: tentar buscar por email
-        const { data: tecByEmail } = await supabase
-          .from('Tecnicos')
+        const { data: vendByEmail } = await supabase
+          .from('vendedores')
           .select('*')
           .eq('email', email)
+          .eq('ativo', true)
           .single()
 
-        if (tecByEmail) {
-          if (!tecByEmail.is_vendedor) {
-            await supabase.auth.signOut()
-            throw new Error('Este usuário não é vendedor. Acesso negado.')
-          }
-
-          // Vincular auth_uid automaticamente
+        if (vendByEmail) {
+          // Vincular auth_uid automaticamente no primeiro login
           await supabase
-            .from('Tecnicos')
+            .from('vendedores')
             .update({ auth_uid: authData.user.id })
-            .eq('Id', tecByEmail.Id)
+            .eq('id', vendByEmail.id)
 
           localStorage.setItem('vendedor', JSON.stringify({
-            id: tecByEmail.Id,
-            nome: tecByEmail.Nome,
+            id: vendByEmail.id,
+            nome: vendByEmail.nome,
             email: email,
           }))
           navigate('/')
@@ -66,8 +62,8 @@ export default function Login() {
 
       // 3. Salvar dados do vendedor no localStorage
       localStorage.setItem('vendedor', JSON.stringify({
-        id: tecnico.Id,
-        nome: tecnico.Nome,
+        id: vendedor.id,
+        nome: vendedor.nome,
         email: email,
       }))
 
