@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1e40af" />
+    <meta name="background-color" content="#f8fafc" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Vendas App" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="App de vendas offline-first para equipe de campo" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- Splash Screen iOS -->
+    <style>
+      #splash {
+        position: fixed; inset: 0; z-index: 9999;
+        display: flex; flex-direction: column; align-items: center; justify-content: center;
+        background: #1e40af;
+        transition: opacity 0.3s ease;
+      }
+      #splash.hide { opacity: 0; pointer-events: none; }
+      #splash svg { width: 80px; height: 80px; }
+      #splash p { color: white; font-family: sans-serif; font-size: 20px; font-weight: 700; margin-top: 16px; }
+      #splash .dots { display: flex; gap: 6px; margin-top: 24px; }
+      #splash .dot {
+        width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.4);
+        animation: pulse 1.2s infinite ease-in-out;
+      }
+      #splash .dot:nth-child(2) { animation-delay: 0.2s; }
+      #splash .dot:nth-child(3) { animation-delay: 0.4s; }
+      @keyframes pulse { 0%,80%,100% { opacity: 0.4; } 40% { opacity: 1; } }
+    </style>
+
+    <title>Vendas App</title>
+  </head>
+  <body class="bg-slate-50 text-slate-900">
+    <!-- Splash Screen -->
+    <div id="splash">
+      <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+        <rect width="512" height="512" rx="96" fill="rgba(255,255,255,0.15)"/>
+        <text x="256" y="340" text-anchor="middle" font-family="Arial,sans-serif" font-weight="bold" font-size="260" fill="#ffffff">VA</text>
+      </svg>
+      <p>Vendas App</p>
+      <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const s = document.getElementById('splash')
+          if (s) { s.classList.add('hide'); setTimeout(() => s.remove(), 300) }
+        }, 800)
+      })
+    </script>
+  </body>
+</html>

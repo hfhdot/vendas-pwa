@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html><head><title>Gerar Icones PWA</title></head>
+<body style="font-family:sans-serif;padding:40px;text-align:center;background:#f1f5f9">
+<h2>Gerar Icones PWA - Vendas App</h2>
+<p>Clique nos botoes para baixar os icones PNG</p>
+<div style="display:flex;gap:30px;justify-content:center;align-items:end;margin:30px 0">
+  <div>
+    <canvas id="p192" width="192" height="192" style="border:1px solid #cbd5e1;border-radius:12px"></canvas>
+    <br><button onclick="download(192)" style="margin-top:10px;background:#1e40af;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer">Baixar 192x192</button>
+  </div>
+  <div>
+    <canvas id="p512" width="512" height="512" style="border:1px solid #cbd5e1;border-radius:12px"></canvas>
+    <br><button onclick="download(512)" style="margin-top:10px;background:#1e40af;color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer">Baixar 512x512</button>
+  </div>
+</div>
+<button onclick="download(192);setTimeout(()=>download(512),500)" style="background:#16a34a;color:#fff;border:none;padding:12px 24px;border-radius:8px;font-size:16px;cursor:pointer">Baixar Todos</button>
+<p style="color:#64748b;margin-top:20px">Salve os arquivos na pasta <code>public/</code> do projeto</p>
+
+<canvas id="c" style="display:none"></canvas>
+<script>
+function drawIcon(ctx, s) {
+  const r = s * 0.1875;
+
+  // Gradiente
+  const grad = ctx.createLinearGradient(0, 0, s, s);
+  grad.addColorStop(0, '#1e40af');
+  grad.addColorStop(1, '#1d4ed8');
+
+  // Rounded rect
+  ctx.beginPath();
+  ctx.moveTo(r, 0); ctx.lineTo(s-r, 0);
+  ctx.quadraticCurveTo(s, 0, s, r); ctx.lineTo(s, s-r);
+  ctx.quadraticCurveTo(s, s, s-r, s); ctx.lineTo(r, s);
+  ctx.quadraticCurveTo(0, s, 0, s-r); ctx.lineTo(0, r);
+  ctx.quadraticCurveTo(0, 0, r, 0);
+  ctx.closePath();
+  ctx.fillStyle = grad;
+  ctx.fill();
+
+  // Pin circle
+  ctx.beginPath();
+  ctx.arc(s*0.5, s*0.32, s*0.09, 0, Math.PI*2);
+  ctx.strokeStyle = 'rgba(255,255,255,0.35)';
+  ctx.lineWidth = s*0.03;
+  ctx.stroke();
+
+  // Pin dot
+  ctx.beginPath();
+  ctx.arc(s*0.5, s*0.32, s*0.028, 0, Math.PI*2);
+  ctx.fillStyle = 'rgba(255,255,255,0.35)';
+  ctx.fill();
+
+  // Texto VA
+  ctx.fillStyle = '#ffffff';
+  ctx.font = 'bold ' + (s*0.4) + 'px Arial, Helvetica, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('VA', s*0.5, s*0.67);
+
+  // Linha decorativa
+  const lw = s*0.35, lh = s*0.008;
+  ctx.fillStyle = 'rgba(255,255,255,0.25)';
+  ctx.fillRect(s*0.5 - lw/2, s*0.83, lw, lh);
+}
+
+// Preview
+[192, 512].forEach(size => {
+  const cv = document.getElementById('p' + size);
+  drawIcon(cv.getContext('2d'), size);
+});
+
+function download(size) {
+  const c = document.getElementById('c');
+  c.width = size; c.height = size;
+  const ctx = c.getContext('2d');
+  ctx.clearRect(0, 0, size, size);
+  drawIcon(ctx, size);
+  const a = document.createElement('a');
+  a.download = 'icon-' + size + '.png';
+  a.href = c.toDataURL('image/png');
+  a.click();
+}
+</script>
+</body>
+</html>
