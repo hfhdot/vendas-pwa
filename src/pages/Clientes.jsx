@@ -72,11 +72,13 @@ export default function Clientes() {
   const filtradas = propriedades.filter((p) => {
     const termo = busca.toLowerCase()
     if (!termo) return true
-    const nome = (p.nome || '').toLowerCase()
-    const cidade = (p.cidade || '').toLowerCase()
+    const campos = [
+      p.nome, p.nome_fantasia, p.razao_social,
+      p.cidade, p.estado, p.endereco, p.cnpj_cpf,
+    ].filter(Boolean).map((c) => c.toLowerCase())
     const dono = clienteMap[p.cliente_dono_id]
-    const nomeDono = dono ? dono.nome.toLowerCase() : ''
-    return nome.includes(termo) || cidade.includes(termo) || nomeDono.includes(termo)
+    if (dono) campos.push(dono.nome.toLowerCase())
+    return campos.some((c) => c.includes(termo))
   })
 
   // Separar: propriedades de donos com múltiplas props vs singles
@@ -280,6 +282,7 @@ function PropCard({ prop, dono, index, navigate, onDelete, compact }) {
           {[prop.cidade, prop.estado].filter(Boolean).join(' - ')}
           {dono ? ` · ${dono.nome}` : ''}
         </p>
+        {prop.telefone && <p className="text-xs text-blue-600 truncate">{prop.telefone}</p>}
       </div>
       <div className="flex items-center gap-2 ml-2 shrink-0">
         <button
