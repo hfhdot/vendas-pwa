@@ -42,6 +42,8 @@ export default function Visitas() {
   const [novaPessoa, setNovaPessoa] = useState({ nome: '', cargo: '', telefone: '' })
   const [showNovaMaquina, setShowNovaMaquina] = useState(false)
   const [novaMaquina, setNovaMaquina] = useState({ tipo: 'Trator Novo', marca: 'New Holland', modelo: '', tamanho: '' })
+  const [showNovoCliente, setShowNovoCliente] = useState(false)
+  const [novoCliente, setNovoCliente] = useState({ nome_cliente: '', nome_propriedade: '', cidade: '' })
   const [showNegocio, setShowNegocio] = useState(false)
   const [showNovoNegocio, setShowNovoNegocio] = useState(false)
   const [novoNegocio, setNovoNegocio] = useState({ valor: '', status: 'prospect', notas: '' })
@@ -221,17 +223,90 @@ export default function Visitas() {
           )}
 
           {/* Cliente */}
-          <select
-            value={clienteSelecionado}
-            onChange={(e) => handleClienteChange(e.target.value)}
-            required
-            className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm"
-          >
-            <option value="">Selecione o cliente *</option>
-            {clientes.map((c) => (
-              <option key={c.id} value={c.id}>{c.nome}</option>
-            ))}
-          </select>
+          <div className="flex gap-2">
+            <select
+              value={clienteSelecionado}
+              onChange={(e) => handleClienteChange(e.target.value)}
+              required={!showNovoCliente}
+              disabled={showNovoCliente}
+              className="flex-1 border border-slate-300 rounded-lg px-3 py-2 text-sm disabled:opacity-50 disabled:bg-slate-50"
+            >
+              <option value="">Selecione o cliente *</option>
+              {clientes.map((c) => (
+                <option key={c.id} value={c.id}>{c.nome}</option>
+              ))}
+            </select>
+            <button
+              type="button"
+              onClick={() => setShowNovoCliente(!showNovoCliente)}
+              className={`px-3 py-2 rounded-lg text-sm font-medium border ${showNovoCliente ? 'bg-slate-100 text-slate-600 border-slate-300' : 'bg-blue-50 text-blue-700 border-blue-200'}`}
+            >
+              {showNovoCliente ? 'Cancelar' : '+ Novo'}
+            </button>
+          </div>
+
+          {/* Mini-form: novo cliente (primeiro contato) */}
+          {showNovoCliente && (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 space-y-2 animate-slide-up">
+              <p className="text-xs font-medium text-blue-700">Cadastrar cliente novo (primeiro contato)</p>
+              <input
+                type="text"
+                placeholder="Nome do cliente / dono *"
+                value={novoCliente.nome_cliente}
+                onChange={(e) => setNovoCliente({ ...novoCliente, nome_cliente: e.target.value })}
+                className="w-full border border-blue-200 rounded-lg px-3 py-2 text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Nome da propriedade / fazenda *"
+                value={novoCliente.nome_propriedade}
+                onChange={(e) => setNovoCliente({ ...novoCliente, nome_propriedade: e.target.value })}
+                className="w-full border border-blue-200 rounded-lg px-3 py-2 text-sm"
+              />
+              <input
+                type="text"
+                placeholder="Cidade (opcional)"
+                value={novoCliente.cidade}
+                onChange={(e) => setNovoCliente({ ...novoCliente, cidade: e.target.value })}
+                className="w-full border border-blue-200 rounded-lg px-3 py-2 text-sm"
+              />
+              <button
+                type="button"
+                onClick={async () => {
+                  if (!novoCliente.nome_cliente || !novoCliente.nome_propriedade) {
+                    alert('Preencha nome do cliente e da propriedade')
+                    return
+                  }
+                  const vendedor = JSON.parse(localStorage.getItem('vendedor'))
+                  const now = new Date().toISOString()
+                  const clienteId = await saveRecord('clientes', {
+                    vendedor_id: vendedor.id,
+                    nome: novoCliente.nome_cliente,
+                    created_at: now,
+                  })
+                  await registrarLog('criar', 'clientes', clienteId, `Criado em check-in: ${novoCliente.nome_cliente}`)
+                  const propId = await saveRecord('propriedades', {
+                    cliente_dono_id: clienteId,
+                    nome: novoCliente.nome_propriedade,
+                    nome_fantasia: novoCliente.nome_propriedade,
+                    cidade: novoCliente.cidade,
+                    created_at: now,
+                  })
+                  await registrarLog('criar', 'propriedades', propId, `Criada em check-in: ${novoCliente.nome_propriedade}`)
+                  await carregar()
+                  setClienteSelecionado(clienteId)
+                  const props = await getByIndex('propriedades', 'cliente_dono_id', clienteId)
+                  setPropriedadesFiltradas(props)
+                  setForm((f) => ({ ...f, propriedade_id: propId }))
+                  setShowNovoCliente(false)
+                  setNovoCliente({ nome_cliente: '', nome_propriedade: '', cidade: '' })
+                }}
+                className="w-full bg-blue-700 text-white py-2 rounded-lg text-sm font-medium"
+              >
+                Salvar e continuar check-in
+              </button>
+            </div>
+          )}
 
           {/* Propriedade (filtrada pelo cliente) */}
           <select
