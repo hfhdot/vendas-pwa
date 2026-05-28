@@ -2,3 +2,12 @@ node_modules
 dist
 .env
 *.local
+
+# Pasta DESIGN/: scripts de scrape + source original do catalogo.
+# Runtime ja foi migrado para src/data/catalogo, public/catalogo, e Supabase Storage.
+# Fica fora do repo pra nao inflar (zips + 54MB de PDFs).
+DESIGN/
+
+# build/cache local
+.vite
+*.log

@@ -1,0 +1,13 @@
+node_modules
+dist
+.env
+.env.*
+.git
+.gitignore
+.vscode
+.idea
+*.md
+supabase-*.sql
+generate-icons.html
+Dockerfile
+.dockerignore
