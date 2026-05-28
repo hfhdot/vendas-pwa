@@ -1,0 +1,51 @@
+{
+  "id": "mahindra-6075",
+  "titulo": "MAHINDRA 6075",
+  "subtitulo": "75 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-6075/",
+  "descricao": "O Trator Mahindra 6075 é o único no segmento com TDP reversora, garantindo mais segurança e agilidade ao operador. Com transmissão mecânica sincronizada e 9 marchas na faixa de trabalho, oferece versatilidade para diversas condições. É cerca de 15% mais econômico comparado aos principais concorrentes, representando o menor custo operacional do Brasil.",
+  "argumentos_de_venda": [
+    "TDP reversora única no segmento",
+    "Transmissão sincronizada com 20F+20R",
+    "Motor Mahindra MSI-475 de 80 cv",
+    "15% mais econômico que concorrentes",
+    "Capô basculante de peça única",
+    "Nove marchas na faixa de trabalho",
+    "Robustez e confiabilidade comprovadas"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/08/6075.png.webp"
+    ],
+    "local": "fotos/mahindra-6075/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "ficha-tecnica-6075.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/ficha-tecnica-6075.pdf"
+  },
+  "especificacoes": {
+    "potência": "80 cv @2100 rpm",
+    "motor": "Mahindra MSI-475, 4 cilindros, 3.8 litros",
+    "transmissão": "Mecânica sincronizada com reversor (20F+20R)",
+    "marchas": "9 marchas na faixa de trabalho",
+    "torque": "Ideal em baixas rotações",
+    "tipo": "Trator Agrícola"
+  },
+  "modelos_supabase": [
+    "6075",
+    "6075 BR",
+    "6075 BR CAB",
+    "6075 CAB",
+    "6075 CBU",
+    "6075 PLAT",
+    "6075L CBU P"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

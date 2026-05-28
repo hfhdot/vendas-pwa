@@ -1,0 +1,47 @@
+{
+  "id": "mahindra-6075e",
+  "titulo": "MAHINDRA 6075E",
+  "subtitulo": "75 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-6075e/",
+  "descricao": "Trator Mahindra 6075E de 80 cv desenvolvido especialmente para culturas semi adensadas como café. Único da categoria com TDP reversora, oferece transmissão mecânica sincronizada com reversor e 9 marchas na faixa de trabalho, garantindo segurança, agilidade e versatilidade em diversas condições operacionais.",
+  "argumentos_de_venda": [
+    "TDP reversora única no segmento",
+    "Motor MSI-475 com baixo consumo combustível",
+    "Transmissão com 20 marchas à frente e ré",
+    "Capô metálico basculante para fácil manutenção",
+    "Largura otimizada para culturas adensadas",
+    "Torque ideal em baixas rotações"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/08/6075E-semfundo3.png.webp"
+    ],
+    "local": "fotos/mahindra-6075e/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "ficha-tecnica-6075E.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/ficha-tecnica-6075E.pdf"
+  },
+  "especificacoes": {
+    "potencia": "80 cv @ 2100 rpm",
+    "motor": "Mahindra MSI-475, 4 cilindros, 3.8 litros",
+    "transmissao": "Mecânica sincronizada com reversor (20F+20R)",
+    "marchas_trabalho": "9 marchas na faixa de trabalho",
+    "tdp": "Reversora",
+    "pneus_padrao": "12.4-28 R1",
+    "largura_total": "1,58 m a 1,67 m (face a face)",
+    "versoes": "Cabinado ou plataformado"
+  },
+  "modelos_supabase": [
+    "6075E",
+    "6075E CAB"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

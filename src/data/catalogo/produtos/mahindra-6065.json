@@ -1,0 +1,47 @@
+{
+  "id": "mahindra-6065",
+  "titulo": "MAHINDRA 6065",
+  "subtitulo": "65 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-6065/",
+  "descricao": "O Trator Mahindra 6065 é o mais novo modelo da linha 6000, equipado com motor agrícola de última geração que proporciona excelente economia. Com transmissão sincronizada, sistema hidráulico de 3 pontos e capacidade de levante superior, é ideal para produtores que buscam versatilidade e eficiência operacional em diversas condições de trabalho.",
+  "argumentos_de_venda": [
+    "Motor MSI-475 65 cv com baixo consumo combustível",
+    "Capacidade levante 2.900 kg maior segmento",
+    "40 marchas totais 20 frente e 20 ré",
+    "Tomada potência com 3 velocidades incluindo reversora",
+    "Capô metal basculante fácil manutenção preventiva",
+    "Transmissão sincronizada redutor velocidades 0,36 km/h"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/08/TRATOR_6065-novo.png.webp"
+    ],
+    "local": "fotos/mahindra-6065/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "ficha-tecnica-6065.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/ficha-tecnica-6065.pdf"
+  },
+  "especificacoes": {
+    "potência": "65 cv @2100 rpm (ISO 14396)",
+    "motor": "Mahindra MSI-475, 4 cilindros, 3.8 Litros",
+    "torque": "Ideal em baixas rotações",
+    "transmissão": "Mecânica sincronizada com reversor e redutor, 20 marchas frente e 20 marchas ré",
+    "sistema_hidraulico": "3 pontos com capacidade levante 2.900 kg",
+    "vazão_controle_remoto": "58 l/min",
+    "tomada_potencia": "3 opções velocidade (540 + 540 E + Reversora)",
+    "velocidade_minima": "0,36 km/h"
+  },
+  "modelos_supabase": [
+    "6065",
+    "6065 CAB"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

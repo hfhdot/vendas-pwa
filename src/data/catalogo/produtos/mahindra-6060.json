@@ -1,0 +1,46 @@
+{
+  "id": "mahindra-6060",
+  "titulo": "MAHINDRA 6060",
+  "subtitulo": "60 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-6060/",
+  "descricao": "O Trator Mahindra 6060 oferece 57 cv de potência com motor de nova geração, transmissão sincronizada de 40 marchas e excelente capacidade de levante hidráulico. Ideal para pequenos e médios produtores que buscam economia de combustível, desempenho confiável e fácil manutenção em operações agrícolas diversificadas.",
+  "argumentos_de_venda": [
+    "Motor Mahindra MTDHI30 de 57 cv com torque em baixas rotações",
+    "Transmissão mecânica sincronizada 20 marchas frente e ré",
+    "Capacidade de levante hidráulico de 2.700 kg",
+    "Vazão de controle remoto de 42 l/min",
+    "Capô basculante de metal com fácil acesso",
+    "Opção de TDP 540E com menor consumo",
+    "Velocidade mínima de 0,360 km/h"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/07/6060ok.png.webp"
+    ],
+    "local": "fotos/mahindra-6060/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "ficha-tecnica-6060.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/ficha-tecnica-6060.pdf"
+  },
+  "especificacoes": {
+    "potencia": "57 cv @ 2100 rpm",
+    "motor": "Mahindra MTDHI30, 4 cilindros, 2,9 litros",
+    "transmissao": "Mecânica sincronizada com reversor, 20F + 20R",
+    "capacidade_levante_hidraulico": "2.700 kg",
+    "vazao_controle_remoto": "42 l/min",
+    "tomada_potencia": "540E disponível",
+    "velocidade_minima": "0,360 km/h"
+  },
+  "modelos_supabase": [
+    "6060"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

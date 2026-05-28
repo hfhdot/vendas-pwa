@@ -8,6 +8,8 @@ import Maquinas from './pages/Maquinas'
 import Visitas from './pages/Visitas'
 import Negocios from './pages/Negocios'
 import Dashboard from './pages/Dashboard'
+import Catalogo from './pages/Catalogo'
+import CatalogoDetalhe from './pages/CatalogoDetalhe'
 
 // Supervisor
 import SupervisorLogin from './supervisor/SupervisorLogin'
@@ -51,6 +53,8 @@ export default function App() {
         <Route path="maquinas/:propriedadeId" element={<Maquinas />} />
         <Route path="visitas" element={<Visitas />} />
         <Route path="negocios" element={<Negocios />} />
+        <Route path="catalogo" element={<Catalogo />} />
+        <Route path="catalogo/:id" element={<CatalogoDetalhe />} />
       </Route>
 
       {/* Supervisor */}

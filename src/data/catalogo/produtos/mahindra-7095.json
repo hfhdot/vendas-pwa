@@ -1,0 +1,49 @@
+{
+  "id": "mahindra-7095",
+  "titulo": "MAHINDRA 7095",
+  "subtitulo": "95 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-7095/",
+  "descricao": "O Trator Mahindra 7095 é uma solução moderna e prática para produtores rurais, oferecendo design contemporâneo, melhor ergonomia, sistema de iluminação LED de última geração e custo operacional competitivo. Projetado com capô de abertura total e plataforma integral de operação, atende às necessidades de quem busca eficiência e durabilidade no campo.",
+  "argumentos_de_venda": [
+    "Design contemporâneo com faróis LED automotivos",
+    "Capô com abertura total para melhor manutenção",
+    "Sistema hidráulico 3 pontos com 3.700 kg de levante",
+    "Transmissão sincronizada com reversor mecânico (12F+12R)",
+    "Embreagem sinterizada de alta durabilidade",
+    "Custo operacional sem igual no mercado",
+    "Plataforma integral de operação ergonômica"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/09/7095-ok2.png.webp"
+    ],
+    "local": "fotos/mahindra-7095/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "P2_AF_Folheto_7095_A4_dez2024-1.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/P2_AF_Folheto_7095_A4_dez2024-1.pdf"
+  },
+  "especificacoes": {
+    "potência": "95 CV",
+    "transmissão": "Sincronizada com reversor mecânico (12F + 12R)",
+    "sistema_hidráulico": "3 pontos",
+    "capacidade_levante": "3.700 kg",
+    "iluminação": "LED",
+    "embreagem": "Discos sinterizados"
+  },
+  "modelos_supabase": [
+    "7095",
+    "7095 95CV",
+    "7095 CAB",
+    "7095 CAB 95CV",
+    "7095CAB"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

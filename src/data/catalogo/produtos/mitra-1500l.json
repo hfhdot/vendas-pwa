@@ -1,0 +1,41 @@
+{
+  "id": "mitra-1500l",
+  "titulo": "MAHINDRA BY MITRA 1500L",
+  "subtitulo": "1500L",
+  "categoria": "pulverizadores",
+  "url_site": "https://www.mahindrabrasil.com.br/mahindra-by-mitra-1500l/",
+  "descricao": "Pulverizador de 1500 litros especialmente desenvolvido para agricultura familiar, ideal para produtores de frutas, café e outras culturas. Equipamento único no mercado que trabalha com rotação de TDP de 450 RPM, proporcionando economia de combustível e maior longevidade. Bomba de diafragma de alta pressão com 75 litros por minuto garante aplicação eficiente e homogênea.",
+  "argumentos_de_venda": [
+    "Rotação TDP 450 RPM única no mercado brasileiro",
+    "Economia de combustível com motor agrícola em baixa rotação",
+    "Bomba 75 litros/minuto alta pressão para aplicação eficiente",
+    "Agitação cruzada para mistura contínua de químicos",
+    "Chassis galvanizado com pintura a pó e laca",
+    "Cinco modos de controle com bicos de duas vias"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/05/novo-1500L-1.png"
+    ],
+    "local": "fotos/mitra-1500l/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "Folheto_Airotec_A4_2022_V4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/Folheto_Airotec_A4_2022_V4.pdf"
+  },
+  "especificacoes": {
+    "capacidade_tanque": "1500L",
+    "tanque_enxague": "115L",
+    "tanque_lavagem_maos": "18L",
+    "vazao_bomba": "75 l/min",
+    "numero_bicos": "14",
+    "diametro_ventilador": "712mm",
+    "velocidade_ar": "38m/s (137km/h)",
+    "alcance_vertical": "9m",
+    "alcance_horizontal": "3,5m",
+    "potencia_requerida": "45 CV",
+    "peso": "675kg"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

@@ -1,0 +1,49 @@
+{
+  "id": "oja-3140",
+  "titulo": "OJA 3140",
+  "subtitulo": "140 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/oja-3140/",
+  "descricao": "O OJA 3140 é uma retroescavadeira compacta Mahindra projetada para trabalhos de precisão em espaços reduzidos. Com motor de 40 CV, oferece excelente capacidade de levante hidráulico e agilidade em manobras. Ideal para operações agrícolas e de construção que exigem eficiência e controle.",
+  "argumentos_de_venda": [
+    "Redutor garante velocidade a partir de 0,3 km/h",
+    "Reversor proporciona maior agilidade em manobras",
+    "TDP eletro-hidráulica com acionamento por botão",
+    "Eixo dianteiro portal com menor raio de giro",
+    "Capacidade de levante hidráulico de 950 kg",
+    "Transmissão com velocidades independentes 540 e 540e"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem1.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem2.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem3.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem5.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem6.png.webp"
+    ],
+    "local": "fotos/oja-3140/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "AF_Folheto_oja3140_A4-BX-1.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/AF_Folheto_oja3140_A4-BX-1.pdf"
+  },
+  "especificacoes": {
+    "motor": "Mahindra DI",
+    "potencia": "40 CV @ 2500 RPM",
+    "torque_maximo": "133 Nm @ 1650 RPM",
+    "tomada_de_potencia": "540 @ 2258 RPM / 540e @ 1786 RPM (Eletro-Hidráulico)",
+    "tanque_combustivel": "33 Litros",
+    "capacidade_levante": "950 kg",
+    "acionamento_tdp": "Independente Eletro-Hidráulico"
+  },
+  "modelos_supabase": [
+    "OJA 3140"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

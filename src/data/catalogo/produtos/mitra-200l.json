@@ -1,0 +1,47 @@
+{
+  "id": "mitra-200l",
+  "titulo": "MAHINDRA BY MITRA 200L",
+  "subtitulo": "200L",
+  "categoria": "pulverizadores",
+  "url_site": "https://www.mahindrabrasil.com.br/mahindra-by-mitra-200l/",
+  "descricao": "Pulverizador Airotec Turbo 200L projetado para aplicações em culturas variadas como uva e pomares. Tanque com capacidade de 200 litros, equipado com agitador para mistura adequada de produtos químicos. Oferece eficiência em pequenas áreas sem restrição de giro, combinando capacidade, controle e versatilidade para proteção e manutenção de plantas.",
+  "argumentos_de_venda": [
+    "Tanque 200 litros com indicador de nível",
+    "Caixa ventilador aço inox contra corrosão",
+    "Pulverização baixo e alto volume",
+    "Sistema dupla filtragem operação suave",
+    "Chassi galvanizado alta durabilidade",
+    "Dispositivos segurança pressão e proteção"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/05/novo-200l-ok.png"
+    ],
+    "local": "fotos/mitra-200l/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "Folheto_Airotec_A4_2022_V4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/Folheto_Airotec_A4_2022_V4.pdf"
+  },
+  "especificacoes": {
+    "capacidade_tanque": "200L",
+    "vazao_bomba_opcao1": "55 l/min",
+    "vazao_bomba_opcao2": "65 l/min",
+    "numero_bicos_opcao1": "10",
+    "numero_bicos_opcao2": "12",
+    "diametro_ventilador_opcao1": "550mm",
+    "diametro_ventilador_opcao2": "616mm",
+    "velocidade_ar_opcao1": "24m/s (87km/h)",
+    "velocidade_ar_opcao2": "32m/s (115km/h)",
+    "alcance_vertical_opcao1": "4m",
+    "alcance_vertical_opcao2": "6m",
+    "alcance_horizontal_opcao1": "2m",
+    "alcance_horizontal_opcao2": "2,5m",
+    "potencia_requerida": "24 CV",
+    "material_tanque": "HDPE",
+    "material_chassi": "Galvanizado imersão quente",
+    "material_ventilador": "Aço inoxidável 304"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

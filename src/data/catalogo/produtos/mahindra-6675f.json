@@ -1,0 +1,44 @@
+{
+  "id": "mahindra-6675f",
+  "titulo": "MAHINDRA 6675F",
+  "subtitulo": "75 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-6675f/",
+  "descricao": "O Trator Mahindra 6675F de 75 cv foi eleito Trator do Ano 23/24 na Categoria Especiais, sendo ideal para produtores de frutas de caroço e maçã. Equipado com motor Perkins de injeção mecânica, oferece transmissão mecânica sincronizada, sistema hidráulico potente e cabine inovadora que proporciona conforto e produtividade nas operações agrícolas especializadas.",
+  "argumentos_de_venda": [
+    "Trator do Ano 23/24 em categoria especiais",
+    "Motor Perkins 1104D-44T com baixo consumo",
+    "Transmissão 16 marchas à frente e 8 à ré",
+    "Sistema hidráulico com 2.800 kg de levante",
+    "TDP 540 Econômica reduz ruído e combustível",
+    "Cabine design inovador adequada para frutas",
+    "Controle remoto com 2 válvulas dupla ação"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/09/6675F-ok.png.webp"
+    ],
+    "local": "fotos/mahindra-6675f/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "AF_Folheto_6675F_A4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/AF_Folheto_6675F_A4.pdf"
+  },
+  "especificacoes": {
+    "potencia": "75 cv",
+    "motor": "Perkins 1104D-44T injeção mecânica",
+    "transmissao": "Mecânica sincronizada 16 marchas à frente, 8 à ré",
+    "sistema_hidraulico": "3 pontos com capacidade de levante 2.800 kg",
+    "controle_remoto": "2 válvulas de dupla ação com vazão 48,5 l/min",
+    "tdp": "540 Econômica",
+    "categoria": "Especiais - frutas de caroço e maçã"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "id": "mitra-600l",
+  "titulo": "MAHINDRA BY MITRA 600L",
+  "subtitulo": "600L",
+  "categoria": "pulverizadores",
+  "url_site": "https://www.mahindrabrasil.com.br/mahindra-by-mitra-600l/",
+  "descricao": "Pulverizador desenvolvido para agricultura familiar, ideal para fruticultores de uva, maçã, romã e outras culturas. Trabalha com rotação TDP de 450 RPM, garantindo economia de combustível e longevidade. Equipado com bomba de diafragma de alta pressão 75 l/min e agitação cruzada para mistura contínua de químicos.",
+  "argumentos_de_venda": [
+    "Única máquina do mercado com 450 RPM de TDP",
+    "Duas velocidades + neutro reguláveis",
+    "Bomba 75 l/min com alta pressão",
+    "Agitação cruzada para mistura contínua",
+    "Alcance vertical até 9 metros",
+    "Chassis galvanizado com pintura a pó"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/05/novo-600L.png"
+    ],
+    "local": "fotos/mitra-600l/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "Folheto_Airotec_A4_2022_V4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/Folheto_Airotec_A4_2022_V4.pdf"
+  },
+  "especificacoes": {
+    "capacidade": "600L",
+    "tanque_enxague": "70L",
+    "tanque_lavagem": "20L",
+    "vazao_bomba": "75 l/min",
+    "numero_bicos": "12-14",
+    "diametro_ventilador": "616-712mm",
+    "velocidade_ar": "32-38 m/s",
+    "alcance_vertical": "6-9m",
+    "alcance_horizontal": "2,5-3,5m",
+    "potencia_requerida": "24-36 CV",
+    "peso": "475-490kg",
+    "rotacao_tdp": "450 RPM"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

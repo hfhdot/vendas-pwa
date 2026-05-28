@@ -1,0 +1,47 @@
+{
+  "id": "mahindra-8110",
+  "titulo": "MAHINDRA 8110",
+  "subtitulo": "110 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-8110/",
+  "descricao": "O trator Mahindra 8110 é o único no segmento com TDP de 6 velocidades, oferecendo versatilidade e agilidade operacional incomparáveis. Fabricado no Brasil com transmissão sincronizada de 16 marchas (10 na faixa principal) e sistema hidráulico potente, é a solução completa para o produtor rural que busca eficiência, facilidade de manutenção e acesso a financiamento via BNDES.",
+  "argumentos_de_venda": [
+    "TDP com 6 opções de velocidade para versatilidade máxima",
+    "Transmissão sincronizada 16F+16R com 10 marchas trabalho",
+    "Capacidade levante 5.000kg no sistema 3 pontos",
+    "Capô basculante facilita manutenção preventiva",
+    "Financiamento BNDES e especificações 86-110",
+    "Sistema freio pneumático carreta categoria",
+    "Ar comprimido com 2 tomadas limpeza calibração"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/09/8110-thumb2.png.webp"
+    ],
+    "local": "fotos/mahindra-8110/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "AF_Folheto_8110_A4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/AF_Folheto_8110_A4.pdf"
+  },
+  "especificacoes": {
+    "potencia": "110 CV",
+    "transmissao": "Mecânica sincronizada com reversor (16F+16R)",
+    "marchas_trabalho": "10 marchas na faixa principal",
+    "tdp": "6 opções de velocidade",
+    "capacidade_levante": "5.000kg",
+    "sistema_hidraulico": "3 pontos hidráulicos",
+    "fabricacao": "Brasil",
+    "freios": "Pneumático para carreta"
+  },
+  "modelos_supabase": [
+    "86-110P"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

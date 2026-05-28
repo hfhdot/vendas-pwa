@@ -1,0 +1,116 @@
+{
+  "catalogo": "Mahindra Brasil",
+  "versao": "1.0",
+  "gerado_em": "2026-05-28T13:13:05.196Z",
+  "total_produtos": 18,
+  "produtos": [
+    {
+      "id": "mahindra-2025",
+      "titulo": "MAHINDRA 2025",
+      "subtitulo": "25 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-5050",
+      "titulo": "MAHINDRA 5050",
+      "subtitulo": "49 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-6060",
+      "titulo": "MAHINDRA 6060",
+      "subtitulo": "60 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-6065",
+      "titulo": "MAHINDRA 6065",
+      "subtitulo": "65 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-6075",
+      "titulo": "MAHINDRA 6075",
+      "subtitulo": "75 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-6075e",
+      "titulo": "MAHINDRA 6075E",
+      "subtitulo": "75 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-6675f",
+      "titulo": "MAHINDRA 6675F",
+      "subtitulo": "75 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-7095",
+      "titulo": "MAHINDRA 7095",
+      "subtitulo": "95 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "mahindra-8110",
+      "titulo": "MAHINDRA 8110",
+      "subtitulo": "110 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "oja-3140",
+      "titulo": "OJA 3140",
+      "subtitulo": "140 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "retroescavadeira-vx90",
+      "titulo": "RETROESCAVADEIRA VX90",
+      "subtitulo": "90 CV",
+      "categoria": "tratores"
+    },
+    {
+      "id": "carregador-frontal",
+      "titulo": "CARREGADOR FRONTAL",
+      "subtitulo": "",
+      "categoria": "implementos"
+    },
+    {
+      "id": "carregador-frontal-l15",
+      "titulo": "CARREGADOR FRONTAL L15",
+      "subtitulo": "",
+      "categoria": "implementos"
+    },
+    {
+      "id": "plantadora-batatas",
+      "titulo": "PLANTADORA DE BATATAS",
+      "subtitulo": "",
+      "categoria": "implementos"
+    },
+    {
+      "id": "mitra-200l",
+      "titulo": "MAHINDRA BY MITRA 200L",
+      "subtitulo": "200L",
+      "categoria": "pulverizadores"
+    },
+    {
+      "id": "mitra-600l",
+      "titulo": "MAHINDRA BY MITRA 600L",
+      "subtitulo": "600L",
+      "categoria": "pulverizadores"
+    },
+    {
+      "id": "mitra-1500l",
+      "titulo": "MAHINDRA BY MITRA 1500L",
+      "subtitulo": "1500L",
+      "categoria": "pulverizadores"
+    },
+    {
+      "id": "mitra-2000l",
+      "titulo": "MAHINDRA BY MITRA 2000L",
+      "subtitulo": "2000L",
+      "categoria": "pulverizadores"
+    }
+  ]
+}

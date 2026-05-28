@@ -1,0 +1,39 @@
+{
+  "id": "carregador-frontal-l15",
+  "titulo": "CARREGADOR FRONTAL L15",
+  "subtitulo": "",
+  "categoria": "implementos",
+  "url_site": "https://www.mahindrabrasil.com.br/carregador-frontal-l15/",
+  "descricao": "O Carregador Frontal L15 é um implemento compacto e versátil, ideal para pequenos e médios produtores rurais. Com capacidade de carga de 300kg e compatibilidade com tratores de 15 a 40cv, oferece agilidade na movimentação de terra, areia, grãos e esterco. Seu design autonivelante e comando monoalavanca garantem facilidade operacional, enquanto a troca rápida de acessórios potencializa a produtividade em diferentes aplicações.",
+  "argumentos_de_venda": [
+    "Capacidade máxima de 300kg de carga",
+    "Compatível com tratores 15 a 40cv",
+    "Comando monoalavanca para fácil operação",
+    "Troca rápida de acessórios disponível",
+    "Acople e desacople sem ferramentas",
+    "Autonivelante para maior precisão",
+    "Peso reduzido de apenas 190kg"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/09/2025-COMPACTO-ABERTO-CONCHA-BAIXO-L15.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/CONCHA.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/PLAINA-1.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/10-PLAINA-ENLEIRADORA-SERIE-M.jpg.webp"
+    ],
+    "local": "fotos/carregador-frontal-l15/"
+  },
+  "ficha_tecnica": null,
+  "especificacoes": {
+    "capacidade_maxima_carga": "300kg",
+    "altura_maxima": "2,10m",
+    "potencia_compativel": "15 a 40cv",
+    "peso": "190kg",
+    "autonivelante": "Sim",
+    "acople_desacople": "Sim",
+    "troca_rapida_acessorios": "Sim",
+    "comando_monoalavanca": "Sim"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

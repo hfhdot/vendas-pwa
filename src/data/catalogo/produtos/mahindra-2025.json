@@ -1,0 +1,40 @@
+{
+  "id": "mahindra-2025",
+  "titulo": "MAHINDRA 2025",
+  "subtitulo": "25 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-2025/",
+  "descricao": "O Trator Mahindra 2025 é um trator subcompacto de 25 cv desenvolvido especialmente para produtores de hortifrutigranjeiros, uva e fumo. Ideal para agricultura familiar, sua estrutura compacta permite trabalhos em estufas e espaços reduzidos de até 80 cm, oferecendo versatilidade e eficiência em operações agrícolas intensivas.",
+  "argumentos_de_venda": [
+    "Capô basculante em metal para fácil manutenção",
+    "Menor raio de giro do segmento para manobras precisas",
+    "Sistema hidráulico 3 pontos com 750 kg de levante",
+    "Transmissão mecânica 8F+4R com versatilidade operacional",
+    "Powertrain estrutural para maior resistência",
+    "Ideal para agricultura familiar e produção intensiva"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/07/2025ok.png.webp"
+    ],
+    "local": "fotos/mahindra-2025/"
+  },
+  "ficha_tecnica": null,
+  "especificacoes": {
+    "potência": "25 cv",
+    "tipo": "Trator subcompacto",
+    "transmissão": "Mecânica 8F+4R",
+    "sistema_hidráulico": "3 pontos com capacidade de levante de 750 kg",
+    "aplicações": "Hortifrutigranjeiros, uva, fumo, estufas, canteiros até 80 cm"
+  },
+  "modelos_supabase": [
+    "JIVO 2025"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

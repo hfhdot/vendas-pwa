@@ -1,0 +1,45 @@
+{
+  "id": "mahindra-5050",
+  "titulo": "MAHINDRA 5050",
+  "subtitulo": "49 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/trator-mahindra-5050/",
+  "descricao": "O Trator Mahindra 5050 com 49,3 cv é ideal para produtores de horticultura, oferecendo grande capacidade operacional com mínimo consumo de combustível. Equipado com motor agrícola Mahindra de última geração, transmissão mecânica versátil e sistema hidráulico de 3 pontos potente, é um trator multitarefas que entrega economia e desempenho.",
+  "argumentos_de_venda": [
+    "Motor Mahindra MTDHI30 com baixo consumo combustível",
+    "Transmissão mecânica 12F + 12R com reversor",
+    "Capô basculante metal facilitando manutenção",
+    "Tomada potência 540E com menor ruído",
+    "Sistema hidráulico 3 pontos 1.700 kg levante",
+    "Versátil para diversas atividades agrícolas"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/07/5050ok.png.webp"
+    ],
+    "local": "fotos/mahindra-5050/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "AF_Folheto_5050_A4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/AF_Folheto_5050_A4.pdf"
+  },
+  "especificacoes": {
+    "potencia": "49,3 cv @ 2100 rpm",
+    "motor": "Mahindra MTDHI30, 4 cilindros, 2,9 litros",
+    "transmissao": "Mecânica com reversor 12F + 12R",
+    "sistema_hidraulico": "3 pontos",
+    "capacidade_levante": "1.700 kg",
+    "vazao_controle_remoto": "27,3 l/min",
+    "tomada_potencia": "540E disponível"
+  },
+  "modelos_supabase": [
+    "5050"
+  ],
+  "filtro_supabase": {
+    "familia_nome": [
+      "Trator Novo",
+      "Trator Seminovo"
+    ],
+    "marca_like": "mahindra"
+  }
+}

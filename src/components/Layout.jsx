@@ -5,6 +5,7 @@ import { setSyncCallback, syncAll, countPending, supabase } from '../lib/sync'
 const navItems = [
   { to: '/dashboard', label: 'Início', icon: '🏠' },
   { to: '/clientes', label: 'Clientes', icon: '👤' },
+  { to: '/catalogo', label: 'Catálogo', icon: '📦' },
   { to: '/visitas', label: 'Visitas', icon: '📍' },
   { to: '/negocios', label: 'Negócios', icon: '💰' },
 ]

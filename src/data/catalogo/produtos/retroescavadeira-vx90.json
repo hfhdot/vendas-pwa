@@ -1,0 +1,46 @@
+{
+  "id": "retroescavadeira-vx90",
+  "titulo": "RETROESCAVADEIRA VX90",
+  "subtitulo": "90 CV",
+  "categoria": "tratores",
+  "url_site": "https://www.mahindrabrasil.com.br/retroescavadeira-vx90/",
+  "descricao": "A Retroescavadeira Mahindra VX90 é uma máquina de construção com motor diesel turbo-intercooler de alta eficiência, destinada a operadores profissionais que buscam produtividade, economia de combustível e conforto. Ideal para obras de escavação, drenagem e infraestrutura, oferece melhor desempenho na categoria com baixo custo de manutenção e cabine climatizada.",
+  "argumentos_de_venda": [
+    "Motor diesel 91cv com melhor eficiência de combustível",
+    "Profundidade máxima de escavação 4350mm",
+    "Transmissão Carraro com 4 marchas à frente e ré",
+    "Cabine com ar-condicionado para conforto total",
+    "Baixo custo de manutenção e maior economia",
+    "Ergonomia superior e design confortável",
+    "Produtividade e desempenho superiores na categoria"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/02/vx902.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/01/image001.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/vx903.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/vx901.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/motor.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/manutencao.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/ergonomia.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/produtividade.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/02/cabine.jpg.webp"
+    ],
+    "local": "fotos/retroescavadeira-vx90/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "AF_Folheto_VX90_A4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/AF_Folheto_VX90_A4.pdf"
+  },
+  "especificacoes": {
+    "tipo_motor": "Diesel 4 cilindros Turbo-intercooler",
+    "potencia": "91cv @ 2200rpm",
+    "torque_maximo": "345Nm @ 1400rpm",
+    "cilindros_cilindrada": "4/3532cc",
+    "transmissao": "Carraro TLB1 (4F + 4R)",
+    "profundidade_maxima_escavacao": "4350mm",
+    "altura_maxima_descarga": "3606mm"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

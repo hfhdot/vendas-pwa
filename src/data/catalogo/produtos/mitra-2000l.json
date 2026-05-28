@@ -1,0 +1,50 @@
+{
+  "id": "mitra-2000l",
+  "titulo": "MAHINDRA BY MITRA 2000L",
+  "subtitulo": "2000L",
+  "categoria": "pulverizadores",
+  "url_site": "https://www.mahindrabrasil.com.br/mahindra-by-mitra-2000l/",
+  "descricao": "Pulverizador agrícola de alta capacidade com 2000 litros, desenvolvido para culturas diversas. Oferece versatilidade em pulverização com controlador de 5 modos, carcaça em aço inoxidável 304 que resiste à corrosão de produtos químicos, e sistema de filtragem dupla. Ideal para propriedades que buscam eficiência, durabilidade e precisão na aplicação de defensivos.",
+  "argumentos_de_venda": [
+    "Tanque de 2000L com dupla filtragem para máxima eficiência",
+    "Carcaça de aço inox 304 com alta resistência à corrosão",
+    "Versatilidade: pulverização baixo e alto volume no mesmo equipamento",
+    "Controle de saída de ar com 2 velocidades e caixa neutra",
+    "Válvula limitadora de pressão protege a bomba",
+    "Chassi galvanizado por imersão a quente para durabilidade",
+    "Sistema de agitação contínua garante mistura uniforme"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/05/novo-2000l-ok.png"
+    ],
+    "local": "fotos/mitra-2000l/"
+  },
+  "ficha_tecnica": {
+    "arquivo": "Folheto_Airotec_A4_2022_V4.pdf",
+    "url_storage": "https://citrhumdkfivdzbmayde.supabase.co/storage/v1/object/public/catalogo-pdfs/Folheto_Airotec_A4_2022_V4.pdf"
+  },
+  "especificacoes": {
+    "capacidade_tanque": "2000L",
+    "tanque_enxague": "145L",
+    "tanque_lavagem_maos": "20L",
+    "vazao_bomba_modelo_1": "75 l/min",
+    "vazao_bomba_modelo_2": "100 l/min",
+    "numero_bicos_modelo_1": "14",
+    "numero_bicos_modelo_2": "16",
+    "diametro_ventilador_modelo_1": "712mm",
+    "diametro_ventilador_modelo_2": "815mm",
+    "velocidade_saida_ar_modelo_1": "38m/s (137km/h)",
+    "velocidade_saida_ar_modelo_2": "44m/s (158km/h)",
+    "alcance_vertical_modelo_1": "9m",
+    "alcance_vertical_modelo_2": "11m",
+    "alcance_horizontal_modelo_1": "3,5m",
+    "alcance_horizontal_modelo_2": "5m",
+    "potencia_requerida_modelo_1": "50 CV",
+    "potencia_requerida_modelo_2": "55 CV",
+    "peso_modelo_1": "780kg",
+    "peso_modelo_2": "810kg"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

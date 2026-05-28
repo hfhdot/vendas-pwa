@@ -1,0 +1,40 @@
+{
+  "id": "plantadora-batatas",
+  "titulo": "PLANTADORA DE BATATAS",
+  "subtitulo": "",
+  "categoria": "implementos",
+  "url_site": "https://www.mahindrabrasil.com.br/plantadora-batatas/",
+  "descricao": "Plantadora de Batatas Mahindra oferece plantio de alta precisão com padronização impecável, eliminando faltas e duplicações. Aumenta a produção de culturas em 10 a 20%, ideal para agricultores que buscam eficiência e rentabilidade no plantio mecanizado de batatas.",
+  "argumentos_de_venda": [
+    "Plantio de alta precisão e padronizado",
+    "Aumenta produção de culturas em 10 a 20%",
+    "Capacidade de 4000 m² por hora",
+    "Tanque fixo com 500 kg de capacidade",
+    "Acionamento mecânico e confiável",
+    "Distâncias ajustáveis entre linhas"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem7.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/Imagem8.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/speed.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/gears.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2025/03/chart.png.webp"
+    ],
+    "local": "fotos/plantadora-batatas/"
+  },
+  "ficha_tecnica": null,
+  "especificacoes": {
+    "tipo_de_tanque": "Fixo",
+    "capacidade_do_tanque": "500 Kg",
+    "capacidade_de_fertilizante": "130 Litros",
+    "acionamento": "Mecânico",
+    "peso_bruto": "1000 Kg",
+    "peso_total_carregada": "1624 Kg",
+    "capacidade_de_plantio": "4000 m²/h @ 3-5 km/h",
+    "distancia_entre_linhas": "61, 66, 71 e 76 cm",
+    "agitador_de_correia": "Mecânico / Eletrônico"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}

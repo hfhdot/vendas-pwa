@@ -1,0 +1,44 @@
+{
+  "id": "carregador-frontal",
+  "titulo": "CARREGADOR FRONTAL",
+  "subtitulo": "",
+  "categoria": "implementos",
+  "url_site": "https://www.mahindrabrasil.com.br/carregador-frontal/",
+  "descricao": "Carregador frontal Mahindra oferece versatilidade para operações agrícolas e pecuárias. Disponível em diversos modelos com capacidades de 800kg a 1.500kg, adaptável a tratores de diferentes potências. Ideal para movimentação de terra, grãos, esterco e outros materiais, com acessórios especializados que ampliam sua funcionalidade no campo.",
+  "argumentos_de_venda": [
+    "Capacidade de carga até 1.500kg",
+    "Versões básicas e autonivelantes",
+    "Compatível com múltiplos modelos Mahindra",
+    "Altura máxima de 3,7 metros",
+    "Diversos acessórios para diferentes aplicações",
+    "Ideal para pecuária e agricultura"
+  ],
+  "fotos": {
+    "site": [
+      "https://www.mahindrabrasil.com.br/storage/2024/09/8110-carregador-frontal-1.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/carregador.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/1.png.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/concha-dianteira.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/4-PLAINA-NIVELADORA-SERIE-M-20M-BX.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/PLAINA.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/11-SUPORTE-BIG-BAG-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/3-GARFO-DE-SILAGEM-ABERTO-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/1-PEGADOR-DE-FENO-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/7-PEGADOR-DE-MADEIRA-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/12-SUPORTE-PARA-PALET-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/6-GARFO-ENLEIRADOR-SERIE-M.jpg.webp",
+      "https://www.mahindrabrasil.com.br/storage/2024/09/10-PLAINA-ENLEIRADORA-SERIE-M.jpg.webp"
+    ],
+    "local": "fotos/carregador-frontal/"
+  },
+  "ficha_tecnica": null,
+  "especificacoes": {
+    "modelos": "T41, M45, T61, M65, T81, M85, M105",
+    "carga_maxima_kg": "800 a 1.500",
+    "altura_maxima_m": "2,85 a 3,7",
+    "versoes": "Básica e Autonivelante",
+    "compatibilidade_tratores": "4530, 5050, 6060, 6065, 6065E, 6065F, 6075, 8000S, 9500S, 86-110P"
+  },
+  "modelos_supabase": [],
+  "filtro_supabase": null
+}
