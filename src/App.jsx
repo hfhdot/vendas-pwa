@@ -20,6 +20,7 @@ import SupervisorVisitas from './supervisor/SupervisorVisitas'
 import SupervisorPosVendas from './supervisor/SupervisorPosVendas'
 import SupervisorAlertas from './supervisor/SupervisorAlertas'
 import SupervisorProdutos from './supervisor/SupervisorProdutos'
+import SupervisorMapa from './supervisor/SupervisorMapa'
 
 function ProtectedRoute({ children }) {
   const vendedor = localStorage.getItem('vendedor')
@@ -76,6 +77,7 @@ export default function App() {
         <Route path="catalogo" element={<Catalogo />} />
         <Route path="catalogo/:id" element={<CatalogoDetalhe />} />
         <Route path="produtos" element={<SupervisorProdutos />} />
+        <Route path="mapa" element={<SupervisorMapa />} />
       </Route>
     </Routes>
   )
