@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { getAllRecords, saveRecord, deleteRecord, registrarLog } from '../lib/db'
 import { TIPOS_PRODUTO, MARCAS } from '../lib/constants'
 import PullToRefresh from '../components/PullToRefresh'
@@ -98,18 +99,9 @@ const MOTIVOS_PERDA = [
   },
 ]
 
-const EMPTY = {
-  cliente_id: '', propriedade_id: '', status: 'prospect',
-  valor: '', data_fechamento_prevista: '', notas: '', produtos: [],
-}
-
 export default function Negocios() {
   const [negocios, setNegocios] = useState([])
   const [clientes, setClientes] = useState([])
-  const [propriedades, setPropriedades] = useState([])
-  const [propsCliente, setPropsCliente] = useState([])
-  const [showForm, setShowForm] = useState(false)
-  const [form, setForm] = useState(EMPTY)
   const [filtroStatus, setFiltroStatus] = useState('todos')
   const [filtroHorizonte, setFiltroHorizonte] = useState('todos')
   const [deleteTarget, setDeleteTarget] = useState(null)
@@ -121,41 +113,6 @@ export default function Negocios() {
   async function carregar() {
     setNegocios(await getAllRecords('negocios'))
     setClientes(await getAllRecords('clientes'))
-    setPropriedades(await getAllRecords('propriedades'))
-  }
-
-  function handleChange(e) {
-    const { name, value } = e.target
-    setForm({ ...form, [name]: value })
-
-    if (name === 'cliente_id') {
-      setPropsCliente(propriedades.filter((p) => p.cliente_dono_id === parseInt(value)))
-      setForm((f) => ({ ...f, cliente_id: value, propriedade_id: '' }))
-    }
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault()
-    const vendedor = JSON.parse(localStorage.getItem('vendedor'))
-    const now = new Date().toISOString()
-
-    await saveRecord('negocios', {
-      vendedor_id: vendedor.id,
-      cliente_id: parseInt(form.cliente_id),
-      propriedade_id: form.propriedade_id ? parseInt(form.propriedade_id) : null,
-      status: form.status,
-      valor: form.valor ? parseFloat(form.valor) : null,
-      motivo_perda: null,
-      data_fechamento_prevista: form.data_fechamento_prevista || null,
-      notas: form.notas,
-      produtos: form.produtos || [],
-      created_at: now,
-      updated_at: now,
-    })
-    await registrarLog('criar', 'negocios', null, `Negócio: R$ ${form.valor || '0'} - ${form.status} - Produtos: ${(form.produtos || []).join(', ') || 'nenhum'}`)
-    setForm(EMPTY)
-    setShowForm(false)
-    carregar()
   }
 
   async function atualizarStatus(negocio, novoStatus) {
@@ -263,58 +220,14 @@ export default function Negocios() {
   return (
     <PullToRefresh onRefresh={carregar}>
     <div>
-      <div className="flex items-center justify-between mb-4">
-        <div>
-          <h2 className="text-xl font-bold">Negócios</h2>
-          <p className="text-sm text-slate-500">Pipeline: R$ {totalValor.toLocaleString('pt-BR')}</p>
-        </div>
-        <button
-          onClick={() => setShowForm(!showForm)}
-          className="bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium"
-        >
-          {showForm ? 'Cancelar' : '+ Novo'}
-        </button>
+      <div className="mb-4">
+        <h2 className="text-xl font-bold">Negócios</h2>
+        <p className="text-sm text-slate-500">Pipeline: R$ {totalValor.toLocaleString('pt-BR')}</p>
+        <p className="text-xs text-slate-400 mt-1">Novos negócios são criados ao registrar uma visita.</p>
       </div>
 
-      {showForm && (
-        <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow p-4 mb-4 space-y-3 animate-slide-up">
-          <select name="cliente_id" value={form.cliente_id} onChange={handleChange} required className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
-            <option value="">Selecione o cliente *</option>
-            {clientes.map((c) => (
-              <option key={c.id} value={c.id}>{c.nome}</option>
-            ))}
-          </select>
-
-          {propsCliente.length > 0 && (
-            <select name="propriedade_id" value={form.propriedade_id} onChange={handleChange} className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
-              <option value="">Propriedade (opcional)</option>
-              {propsCliente.map((p) => (
-                <option key={p.id} value={p.id}>{p.nome}</option>
-              ))}
-            </select>
-          )}
-
-          <select name="status" value={form.status} onChange={handleChange} className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm">
-            {STATUS_FUNIL.map((s) => (
-              <option key={s.key} value={s.key}>{s.label}</option>
-            ))}
-          </select>
-
-          {/* Produtos */}
-          <ProdutosEditor
-            produtos={form.produtos}
-            onChange={(prods) => setForm({ ...form, produtos: prods })}
-          />
-
-          <input name="valor" value={form.valor} onChange={handleChange} placeholder="Valor (R$)" type="number" step="0.01" inputMode="decimal" className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-          <input name="data_fechamento_prevista" value={form.data_fechamento_prevista} onChange={handleChange} type="date" className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-          <textarea name="notas" value={form.notas} onChange={handleChange} placeholder="Notas" rows={2} className="w-full border border-slate-300 rounded-lg px-3 py-2 text-sm" />
-          <button type="submit" className="w-full bg-green-600 text-white py-2 rounded-lg font-medium text-sm">Salvar Negócio</button>
-        </form>
-      )}
-
-      {/* Filtro por status */}
-      <div className="flex gap-1 overflow-x-auto pb-2 mb-2">
+      {/* Filtros (status + horizonte) num único scroll horizontal */}
+      <div className="flex gap-1 overflow-x-auto pb-2 mb-3 items-center">
         <button
           onClick={() => setFiltroStatus('todos')}
           className={`px-3 py-1 rounded-full text-xs whitespace-nowrap border ${filtroStatus === 'todos' ? 'bg-blue-700 text-white border-blue-700' : 'bg-white text-slate-600 border-slate-300'}`}
@@ -333,10 +246,9 @@ export default function Negocios() {
             </button>
           )
         })}
-      </div>
 
-      {/* Filtro por horizonte (previsão de fechamento) */}
-      <div className="flex gap-1 overflow-x-auto pb-2 mb-3">
+        <span className="w-px h-5 bg-slate-300 mx-1 shrink-0" aria-hidden="true" />
+
         {HORIZONTES.map((h) => {
           const count = h.key === 'todos'
             ? negociosComHorizonte.length
@@ -363,9 +275,9 @@ export default function Negocios() {
           <p className="text-4xl mb-3">💰</p>
           <p className="text-slate-400">{filtroStatus === 'todos' && filtroHorizonte === 'todos' ? 'Nenhum negócio cadastrado' : 'Nenhum negócio neste filtro'}</p>
           {filtroStatus === 'todos' && filtroHorizonte === 'todos' && (
-            <button onClick={() => setShowForm(true)} className="text-blue-700 text-sm mt-2 font-medium">
-              Criar primeiro negócio
-            </button>
+            <Link to="/visitas" className="text-blue-700 text-sm mt-2 font-medium inline-block">
+              Registrar uma visita →
+            </Link>
           )}
         </div>
       ) : (

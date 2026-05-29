@@ -131,7 +131,7 @@ export default function Dashboard() {
         onClick={() => navigate('/visitas')}
         className="w-full bg-blue-700 text-white py-3 rounded-xl font-medium text-sm mb-4 active:bg-blue-800"
       >
-        + Novo Check-in
+        + Nova Visita
       </button>
 
       {/* Contatos atrasados */}
