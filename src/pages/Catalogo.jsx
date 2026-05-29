@@ -218,11 +218,18 @@ function CardEstoque({ produto, index }) {
       </div>
       <div className="p-2">
         <p className="font-bold text-sm leading-tight">{produto.modelo || titulo}</p>
-        <p className="text-xs text-slate-500 mt-0.5">{produto.marca || '—'}</p>
+        <p className="text-xs text-slate-500 mt-0.5">
+          {produto.marca || '—'}
+          {produto.n_variacoes > 1 && ` · ${produto.n_variacoes} variações`}
+        </p>
         <div className="flex items-center justify-between mt-1">
           <span className="text-[10px] text-green-700 font-semibold">{produto.estoque_efetivo} un</span>
-          {produto.preco_efetivo > 0 ? (
-            <span className="text-[10px] text-slate-700 font-medium">{formatBRL(produto.preco_efetivo)}</span>
+          {produto.preco_min > 0 ? (
+            <span className="text-[10px] text-slate-700 font-medium">
+              {produto.preco_min === produto.preco_max
+                ? formatBRL(produto.preco_min)
+                : `${formatBRL(produto.preco_min)}+`}
+            </span>
           ) : (
             <span className="text-[10px] text-amber-600">consulte</span>
           )}

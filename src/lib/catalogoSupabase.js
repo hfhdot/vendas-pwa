@@ -150,7 +150,40 @@ export async function getEstoqueAtual({ force = false } = {}) {
     }
   })
 
-  estoqueAtualCache = merged.filter((p) => p.visivel)
+  // Filtra invisíveis e zerados (não mostra produto sem estoque na vitrine)
+  const visiveis = merged.filter((p) => p.visivel && p.estoque_efetivo > 0)
+
+  // Agrupa por modelo (case-insensitive). Modelo vazio = item individual.
+  const grupos = new Map()  // key -> { items: [], total: ... }
+  for (const p of visiveis) {
+    const modeloNorm = (p.modelo || '').trim().toUpperCase()
+    const key = modeloNorm ? `m:${modeloNorm}` : `i:${p.codigo_produto}`
+    if (!grupos.has(key)) grupos.set(key, [])
+    grupos.get(key).push(p)
+  }
+
+  // Cada grupo vira 1 card. Atributos agregados.
+  const resultado = []
+  for (const items of grupos.values()) {
+    const primario = items[0]                                       // pra rota /catalogo/sb-{id}
+    const estoque_total = items.reduce((s, x) => s + x.estoque_efetivo, 0)
+    const precos = items.map((x) => x.preco_efetivo).filter((v) => v > 0)
+    const preco_min = precos.length ? Math.min(...precos) : 0
+    const preco_max = precos.length ? Math.max(...precos) : 0
+    const imagem_url = items.map((x) => x.imagem_url).find((u) => !!u) || null
+    resultado.push({
+      ...primario,
+      estoque_efetivo: estoque_total,       // soma do grupo
+      preco_efetivo: preco_min || 0,        // referência (card mostra faixa via preco_min/max)
+      preco_min,
+      preco_max,
+      imagem_url,
+      n_variacoes: items.length,
+      grupo_codigos: items.map((x) => x.codigo_produto),
+    })
+  }
+
+  estoqueAtualCache = resultado
   return estoqueAtualCache
 }
 
